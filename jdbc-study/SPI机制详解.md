@@ -1,11 +1,10 @@
 ---
 title: SPI 机制详解
-tags:
-
-- 进阶
-  created: 2022-11-25 13:48:54
-  modified: 2022-11-25 13:48:54
-  number headings: auto, first-level 1, max 6, _.1.1.
+tags: 
+  - 进阶 
+created: 2022-11-25 13:48:54
+modified: 2022-11-25 13:48:54
+number headings: auto, first-level 1, max 6, _.1.1.
 
 ---
 
