@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>java8-study</module>
+        <module>jdbc-study</module>
     </modules>
 
     <properties>
@@ -20,6 +21,9 @@
         <slf4j.version>2.0.3</slf4j.version>
         <logback.version>1.4.4</logback.version>
         <lombok.version>1.18.24</lombok.version>
+        <mysql.version>8.0.28</mysql.version>
+        <hikaricp.version>5.0.1</hikaricp.version>
+        <druid.version>1.2.8</druid.version>
     </properties>
 
     <dependencyManagement>
@@ -54,6 +58,24 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <!-- MySQL -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!-- HikariCP数据库连接池 -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikaricp.version}</version>
+            </dependency>
+            <!-- Druid数据库连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
