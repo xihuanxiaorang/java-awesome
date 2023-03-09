@@ -4,6 +4,7 @@ tags: jdbc
 created: 2022-08-24 18:12:20
 modified: 2022-10-18 22:30:21
 number headings: auto, first-level 1, max 6, _.1.1.
+
 ---
 
 # JDBC
@@ -16,7 +17,7 @@ JDBC，全称是 Java DataBase Connectivity。
 - **JDBC 是一种标准**，JDBC 标准提供的接口存在于 `java.sql` 包中。在这个包中定义有 **数据库的连接标准**、**数据库的操作标准
   ** 以及 **数据库结果集的处理标准**。每个数据库厂商会提供各自的 JDBC
   实现，程序员只需要面向接口和标准编程，不需要关心具体实现。  
-  ![jdbc标准.drawio](https://fastly.jsdelivr.net/gh/xihuanxiaorang/images/202303090003977.svg)
+  ![jdbc标准](https://fastly.jsdelivr.net/gh/xihuanxiaorang/images/202303092240392.png)
 
 | 接口/类              | 作用                      |
 |-------------------|-------------------------|
@@ -28,7 +29,7 @@ JDBC，全称是 Java DataBase Connectivity。
 
 ## 2. JDBC 执行流程
 
-![JDBC 执行流程.excalidraw | 500](https://fastly.jsdelivr.net/gh/xihuanxiaorang/images/202303090003899.svg)
+![JDBC 执行流程](https://fastly.jsdelivr.net/gh/xihuanxiaorang/images/202303092221392.png)
 
 ### 2.1. 环境搭建
 
@@ -60,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `user`
 `java.sql.Driver` 接口是所有驱动程序需要实现的接口。这个接口是提供给数据库厂商使用的，不同的数据库厂商提供不同的实现。其中，加载驱动由
 Java SPI 机制实现，无需再像以前一样使用 `Class.forName("com.mysql.driver")` 来加载 MySQL 驱动。
 
-> 对于 **Java SPI** 不清楚的小伙伴可以查看 [SPI机制详解](./SPI机制详解.md) 这一篇文章，文章中详细地介绍了 Java SPI
-> 机制的由来、原理以及应用。
+> 对于 **Java SPI** 不清楚的小伙伴可以查看 [SPI机制详解](../java/other/SPI机制详解.md) 这一篇文章，文章中详细地介绍了
+> Java SPI 机制的由来、原理以及应用。
 
 #### 2.2.2. URL
 
@@ -718,7 +719,7 @@ public void testPreparedStatementBatchAdd3(){
 
 ### 4.1. MySQL 对事务的支持
 
-> 对于 MySQL 中事务不清楚的小伙伴的可以查看 [MySQL四种隔离级别演示](./四种隔离级别演示.md) 这篇文章，文章中详细地介绍了
+> 对于 MySQL 中事务不清楚的小伙伴的可以查看 [MySQL四种隔离级别演示](../MySQL/四种隔离级别演示.md) 这篇文章，文章中详细地介绍了
 > MySQL 事务特性以及 MySQL 的四种隔离级别。
 
 ### 4.2. JDBC 事务处理
