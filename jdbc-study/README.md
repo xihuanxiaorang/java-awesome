@@ -17,7 +17,7 @@ JDBC，全称是 Java DataBase Connectivity。
 - **JDBC 是一种标准**，JDBC 标准提供的接口存在于 `java.sql` 包中。在这个包中定义有 **数据库的连接标准**、**数据库的操作标准
   ** 以及 **数据库结果集的处理标准**。每个数据库厂商会提供各自的 JDBC
   实现，程序员只需要面向接口和标准编程，不需要关心具体实现。  
-  ![jdbc标准](https://fastly.jsdelivr.net/gh/xihuanxiaorang/images/202303092240392.png)
+  ![jdbc标准](https://fastly.jsdelivr.net/gh/xihuanxiaorang/images/202303092248857.png)
 
 | 接口/类              | 作用                      |
 |-------------------|-------------------------|
