@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.xiaorang.mybatis.mapper.TeacherMapper">
+    <!-- 结果集嵌套的方式（推荐使用，查询嵌套的方式不易理解，就不列举了） -->
+    <resultMap id="TeacherStudentMap" type="teacher">
+        <result property="id" column="tid"/>
+        <result property="name" column="tname"/>
+        <collection property="students" ofType="student">
+            <result property="id" column="sid"/>
+            <result property="name" column="sname"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectTeacherList" resultMap="TeacherStudentMap">
+        select t.id as tid, t.name tname, s.id sid, s.name sname
+        from `teacher` t,
+             `student` s
+        where t.id = s.tid;
+    </select>
+</mapper>

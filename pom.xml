@@ -11,6 +11,7 @@
     <modules>
         <module>java8-study</module>
         <module>jdbc-study</module>
+        <module>mybatis-study</module>
     </modules>
 
     <properties>
@@ -24,6 +25,7 @@
         <mysql.version>8.0.28</mysql.version>
         <hikaricp.version>5.0.1</hikaricp.version>
         <druid.version>1.2.8</druid.version>
+        <mybatis.version>3.5.10</mybatis.version>
     </properties>
 
     <dependencyManagement>
@@ -76,6 +78,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+            <!-- Mybatis持久层框架 -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
